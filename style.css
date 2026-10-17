@@ -1,0 +1,170 @@
+/* QuickNotes: basic, readable styling */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.5;
+  color: #1f2933;
+  background: #f4f6f8;
+}
+
+main {
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 3rem;
+}
+
+h1 {
+  margin-bottom: 0.25rem;
+}
+
+.intro {
+  margin-top: 0;
+  color: #52606d;
+}
+
+button {
+  font: inherit;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  background: #1d4ed8;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:hover:not(:disabled) {
+  background: #1e40af;
+}
+
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #93c5fd;
+  outline-offset: 2px;
+}
+
+button:disabled {
+  background: #9aa5b1;
+  cursor: not-allowed;
+}
+
+/* Status messages: each type has its own colour, border and icon */
+.status {
+  min-height: 1.5rem;
+  margin: 1rem 0;
+  padding: 0.6rem 0.8rem;
+  border-left: 5px solid transparent;
+  border-radius: 4px;
+}
+
+.status:empty {
+  padding: 0;
+  border: none;
+}
+
+.status.loading {
+  background: #e0ecff;
+  border-left-color: #1d4ed8;
+  color: #1e3a8a;
+}
+
+.status.success {
+  background: #dcfce7;
+  border-left-color: #15803d;
+  color: #14532d;
+}
+
+.status.success::before {
+  content: "\2713  ";
+  font-weight: bold;
+}
+
+.status.error {
+  background: #fee2e2;
+  border-left-color: #b91c1c;
+  color: #7f1d1d;
+}
+
+.status.error::before {
+  content: "\2715  ";
+  font-weight: bold;
+}
+
+form {
+  margin: 1rem 0 1.5rem;
+  padding: 1rem;
+  background: #fff;
+  border: 1px solid #d9e2ec;
+  border-radius: 8px;
+}
+
+form h2 {
+  margin-top: 0;
+  font-size: 1.1rem;
+}
+
+label {
+  display: block;
+  margin: 0.75rem 0 0.25rem;
+  font-weight: 600;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 0.5rem;
+  font: inherit;
+  border: 1px solid #9aa5b1;
+  border-radius: 6px;
+}
+
+form button {
+  margin-top: 1rem;
+}
+
+#notes-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.note,
+.empty {
+  margin-bottom: 0.75rem;
+  padding: 0.75rem 1rem;
+  background: #fff;
+  border: 1px solid #d9e2ec;
+  border-radius: 8px;
+}
+
+.note h3 {
+  margin: 0 0 0.25rem;
+  font-size: 1.05rem;
+  overflow-wrap: anywhere;
+}
+
+.note p {
+  margin: 0 0 0.5rem;
+  white-space: pre-line;
+  overflow-wrap: anywhere;
+}
+
+.empty {
+  color: #52606d;
+  font-style: italic;
+  text-align: center;
+}
+
+.delete-btn {
+  padding: 0.25rem 0.75rem;
+  background: #b91c1c;
+}
+
+.delete-btn:hover:not(:disabled) {
+  background: #991b1b;
+}
